@@ -90,7 +90,7 @@ public class ProjectInvoiceService {
                 contentStream.setLeading(15);
                 contentStream.newLineAtOffset(50, 750);
 
-                contentStream.showText("                  PROTRACKER ORGANIZATION                 ");
+                contentStream.showText("                              PROTRACKER ORGANIZATION                 ");
                 contentStream.newLine();
                 contentStream.newLine();
                 // Adding invoice details
@@ -99,35 +99,49 @@ public class ProjectInvoiceService {
                 contentStream.newLine();
                 contentStream.showText(" FROM  : ");
                 contentStream.newLine();
-                contentStream.showText("    Company Name: PROTRACK");
                 contentStream.newLine();
-                contentStream.showText("    Address: PROTRACK CORPORATION , THIRUVANANTHAPURAM");
+                contentStream.showText("         Company Name: PROTRACK");
                 contentStream.newLine();
-                contentStream.showText("    Phone: +91 9443554122");
+                contentStream.showText("         Address: PROTRACK CORPORATION , THIRUVANANTHAPURAM");
                 contentStream.newLine();
-                contentStream.showText("    Email: contact@protrack.com");
+                contentStream.showText("         Phone: +91 9443554122");
                 contentStream.newLine();
-                contentStream.showText("    Website: www.protrack.com");
+                contentStream.showText("         Email: contact@protrack.com");
                 contentStream.newLine();
-                contentStream.showText("-----------------------------");
+                contentStream.showText("         Website: www.protrack.com");
+                contentStream.newLine();
+                contentStream.showText("---------------------------------------------------");
                 contentStream.newLine();
                 contentStream.newLine();
+                contentStream.showText(" TO  : ");
 
+                contentStream.newLine();
                 contentStream.newLine();
 //                contentStream.showText("Project Id: " + invoice.getProjectId());
 //                contentStream.newLine();
+                contentStream.showText("         Company Name: " + invoice.getClientName());
+                contentStream.newLine();
+                contentStream.showText("         Project ID: " + invoice.getProjectId());
+                contentStream.newLine();
+                contentStream.showText("         Project Name: " + invoice.getProjectManager());
+                contentStream.newLine();
+                contentStream.showText("         Invoice Number: " + invoice.getInvoiceId());
+                contentStream.newLine();
+                contentStream.showText("         Invoice Date: " + LocalDate.now());
+                contentStream.newLine();
 
-                contentStream.showText("Invoice Number: " + invoice.getInvoiceId());
+
+                contentStream.showText("         Final Amount: " + invoice.getFinalAmount());
                 contentStream.newLine();
-                contentStream.showText("Invoice Date: " + LocalDate.now());
+
+                contentStream.showText("         PO NUMBER : " + invoice.getPoNumber());
+
                 contentStream.newLine();
-                contentStream.showText("Company Name: Economic crew proj solutions");
+                contentStream.showText("         Total Amount: " + invoice.getTotalAmount());
                 contentStream.newLine();
-                contentStream.showText("Total Amount: " + invoice.getTotalAmount());
+                contentStream.showText("         Tax Amount (18% GST): " + invoice.getTaxAmount());
                 contentStream.newLine();
-                contentStream.showText("Tax Amount (18% GST): " + invoice.getTaxAmount());
-                contentStream.newLine();
-                contentStream.showText("Project Status:  Completed");
+                contentStream.showText("         Project Status:  Completed");
                 contentStream.newLine();
                 contentStream.newLine();
 
